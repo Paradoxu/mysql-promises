@@ -1,0 +1,32 @@
+{
+	"name": "mysql-promises",
+	"version": "0.1.1",
+	"description": "A simple wrapper to manager mysql requests with Typescript",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"prepare": "npm run build",
+		"postversion": "git push && git push --tags",
+		"publish": "npm publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Paradoxu/mysql-promises.git"
+	},
+	"author": "Leo Letto",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Paradoxu/mysql-promises/issues"
+	},
+	"homepage": "https://github.com/Paradoxu/mysql-promises#readme",
+	"devDependencies": {
+		"@types/mysql2": "github:types/mysql2",
+		"ts-jest": "^26.1.1",
+		"tslint": "^6.1.2",
+		"typescript": "^3.9.5"
+	},
+	"peerDependencies": {
+		"mysql2": "^2.1.0"
+	}
+}
