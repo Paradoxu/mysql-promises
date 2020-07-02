@@ -1,2 +1,2 @@
-export * from './db-implementation';
-export * from './query-interface';
+export * from './implementations/db';
+export * from './implementations/query-interface';

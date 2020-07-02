@@ -1,5 +1,5 @@
 import { RowDataPacket } from "mysql2";
-import { EmptyResult } from "./errors/no-elements";
+import { EmptyResult } from "../errors/no-elements";
 
 export class SelectResult<T extends Object>{
     public results: T[] = [];
@@ -51,5 +51,12 @@ export class SelectResult<T extends Object>{
     assert(): void {
         if (!this.hasResults)
             throw new EmptyResult('No elements found on the result');
+    }
+
+    /**
+     * Convert the results of this query into a JSON string
+     */
+    toJSON(): Object {
+        return this.results;
     }
 }

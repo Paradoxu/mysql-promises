@@ -24,4 +24,8 @@ export declare class SelectResult<T extends Object> {
      * @throws EmptyResult error if there's no result on this instance
      */
     assert(): void;
+    /**
+     * Convert the results of this query into a JSON string
+     */
+    toJSON(): Object;
 }

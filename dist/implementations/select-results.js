@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SelectResult = void 0;
-const no_elements_1 = require("./errors/no-elements");
+const no_elements_1 = require("../errors/no-elements");
 class SelectResult {
     constructor(data) {
         this.results = [];
@@ -42,6 +42,12 @@ class SelectResult {
     assert() {
         if (!this.hasResults)
             throw new no_elements_1.EmptyResult('No elements found on the result');
+    }
+    /**
+     * Convert the results of this query into a JSON string
+     */
+    toJSON() {
+        return this.results;
     }
 }
 exports.SelectResult = SelectResult;
